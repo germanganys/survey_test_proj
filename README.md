@@ -6,33 +6,23 @@
 
 * Выполнить
 
-```python
-source
-venv / bin / activate
-python
-manage.py
-runserver
+```bash
+source venv/bin/activate
+python manage.py runserver
 ```
 
-+ логин и пароль в django admin 1:1
++ логин и пароль в django admin 1:1 venv
 
 ### Если нужно создать бд заново
 
 * Удалить db.sqlite3
 * Выполнить
 
-```python
-source
-venv / bin / activate
-python
-manage.py
-migrate
-python
-manage.py
-createsuperuser
-python
-manage.py
-runserver
+```bash
+source venv/bin/activate
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
 ```
 
 # Описание API
@@ -64,44 +54,44 @@ runserver
         }
       },
       "POST": {
-            "id": {
-                "type": "integer",
-                "required": false,
-                "read_only": true,
-                "label": "ID"
-            },
-            "user_id": {
-                "type": "string",
-                "required": true,
-                "read_only": false,
-                "label": "User id",
-                "max_length": 32
-            },
-            "question": {
-                "type": "field",
-                "required": true,
-                "read_only": false,
-                "label": "Question"
-            },
-            "survey": {
-                "type": "field",
-                "required": true,
-                "read_only": false,
-                "label": "Survey"
-            },
-            "answ_txt": {
-                "type": "string",
-                "required": false,
-                "read_only": false,
-                "label": "Answ txt"
-            },
-            "answ_choices": {
-                "type": "field",
-                "required": false,
-                "read_only": false,
-                "label": "Answ choices"
-            }
+        "id": {
+          "type": "integer",
+          "required": false,
+          "read_only": true,
+          "label": "ID"
+        },
+        "user_id": {
+          "type": "string",
+          "required": true,
+          "read_only": false,
+          "label": "User id",
+          "max_length": 32
+        },
+        "question": {
+          "type": "field",
+          "required": true,
+          "read_only": false,
+          "label": "Question"
+        },
+        "survey": {
+          "type": "field",
+          "required": true,
+          "read_only": false,
+          "label": "Survey"
+        },
+        "answ_txt": {
+          "type": "string",
+          "required": false,
+          "read_only": false,
+          "label": "Answ txt"
+        },
+        "answ_choices": {
+          "type": "field",
+          "required": false,
+          "read_only": false,
+          "label": "Answ choices"
         }
+      }
     }
   },
   "questions": {
@@ -111,7 +101,7 @@ runserver
         "params": {
           "survey_id": "идентификатор опроса"
         }
+      }
     }
   }
-}
 ```
