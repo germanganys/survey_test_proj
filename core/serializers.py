@@ -32,10 +32,11 @@ class QuestionSerializer(serializers.ModelSerializer):
 
 
 class AnswerSerializer(serializers.ModelSerializer):
-
+    answ_choices_set = ChoiceSerializer(source='answ_choices', read_only=True, many=True)
+    question_details = QuestionSerializer(source='question', read_only=True)
     class Meta:
         model = Answer
-        fields = ('id', 'user_id', 'question', 'survey', 'answ_txt', 'answ_choices')
+        fields = ('id', 'user_id', 'question', 'question_details', 'survey', 'answ_txt', 'answ_choices', 'answ_choices_set')
 
 
 class SurveyByIdSerializer(serializers.Serializer):

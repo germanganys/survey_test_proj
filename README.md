@@ -1,6 +1,12 @@
 # Опросник на Django 2 + DRF 3
 
 ## Инструкция как развернуть проект
+### Разворачиваем окружение
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements
+```
 
 ### Быстрый способ
 
