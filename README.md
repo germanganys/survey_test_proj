@@ -17,7 +17,7 @@ source venv/bin/activate
 python manage.py runserver
 ```
 
-+ логин и пароль в django admin 1:1 venv
++ логин и пароль в django admin 1:1
 
 ### Если нужно создать бд заново
 
